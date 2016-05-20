@@ -7,4 +7,5 @@ Implementation-Vendor-Id: swt1.ub1.a1
 Build-Jdk: 1.8.0_92
 Specification-Version: 0.0.1-SNAPSHOT
 Created-By: Maven Integration for Eclipse
+Main-Class: org.jis.Main
 
