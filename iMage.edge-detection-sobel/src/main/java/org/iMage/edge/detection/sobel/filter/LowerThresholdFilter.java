@@ -17,8 +17,31 @@ public class LowerThresholdFilter implements ImageFilter {
 
 	@Override
 	public BufferedImage applyFilter(BufferedImage image) {
-		// TODO Auto-generated method stub
-		return null;
+		int height = image.getHeight();
+		int width = image.getWidth();
+		int threshold = 127;
+		for (int i = 0; i < height; i++) {
+			for (int j = 0; j < width; j++) {
+				int old = image.getRGB(j, i);
+				// Get the A, R, G, B information from the integer "old" through
+				// bit manipulation
+				int a = old & 0xff000000;
+				int r = (old & 0x00ff0000) >> 16;
+				int g = (old & 0x0000ff00) >> 8;
+				int b = old & 0x000000ff;
+				int average = (r + g + b) / 3;
+				if (average < threshold) {
+					image.setRGB(j, i, a);
+				}
+				else {
+					a += average << 16;
+					a += average << 8;
+					a += average;
+					image.setRGB(j, i, a);
+				}
+			}
+		}
+		return image;
 	}
 
 }
