@@ -18,5 +18,10 @@
   
   <modules>
   	<module>jmjrst.main</module>
+  	
+  	<module>../iMage.edge-detection-sobel</module>
+  	
+  	
+  	
   </modules>
 </project>
