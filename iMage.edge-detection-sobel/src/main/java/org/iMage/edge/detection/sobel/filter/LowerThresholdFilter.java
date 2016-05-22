@@ -5,8 +5,9 @@ import java.awt.image.BufferedImage;
 import org.iMage.edge.detection.base.ImageFilter;
 
 /**
- * Filters all pixels that have a grayscale color below a certain threshold and sets them to 0 (makes them black).
- * Pixels above the threshold are converted to grayscale normally (as defined in {@link GrayScaleFilter}).
+ * Filters all pixels that have a grayscale color below a certain threshold and
+ * sets them to 0 (makes them black). Pixels above the threshold are converted
+ * to grayscale normally (as defined in {@link GrayScaleFilter}).
  */
 public class LowerThresholdFilter implements ImageFilter {
 
@@ -15,7 +16,13 @@ public class LowerThresholdFilter implements ImageFilter {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
+	/*
+	 * To change the pixel which is unter the threshold into black pixel
+	 * 
+	 * @param image the image to be processed
+	 * 
+	 * @return image return a processed image
+	 */
 	public BufferedImage applyFilter(BufferedImage image) {
 		int height = image.getHeight();
 		int width = image.getWidth();
@@ -30,10 +37,12 @@ public class LowerThresholdFilter implements ImageFilter {
 				int g = (old & 0x0000ff00) >> 8;
 				int b = old & 0x000000ff;
 				int average = (r + g + b) / 3;
+				// If the result is lower than the threshold, denn it will be
+				// turn into a black pixel, otherwise it will be kept in the
+				// image
 				if (average < threshold) {
 					image.setRGB(j, i, a);
-				}
-				else {
+				} else {
 					a += average << 16;
 					a += average << 8;
 					a += average;
@@ -43,5 +52,4 @@ public class LowerThresholdFilter implements ImageFilter {
 		}
 		return image;
 	}
-
 }

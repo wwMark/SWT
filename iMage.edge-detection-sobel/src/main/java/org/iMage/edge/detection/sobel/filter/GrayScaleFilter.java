@@ -14,6 +14,13 @@ public class GrayScaleFilter implements ImageFilter {
 		// TODO Auto-generated constructor stub
 	}
 
+	/*
+	 * To change an image into an gray scale image
+	 * 
+	 * @param image the image to be processed
+	 * 
+	 * @return image return a processed image
+	 */
 	public BufferedImage applyFilter(BufferedImage image) {
 		int height = image.getHeight();
 		int width = image.getWidth();
@@ -27,6 +34,7 @@ public class GrayScaleFilter implements ImageFilter {
 				int g = (old & 0x0000ff00) >> 8;
 				int b = old & 0x000000ff;
 				int average = (r + g + b) / 3;
+				// The information of Alpha canal will be kept
 				a += average << 16;
 				a += average << 8;
 				a += average;

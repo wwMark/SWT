@@ -14,7 +14,13 @@ public class SobelFilter implements ImageFilter {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
+	/*
+	 * To give the image a special feature through a matrix
+	 * 
+	 * @param image the image to be processed
+	 * 
+	 * @return image return a processed image
+	 */
 	public BufferedImage applyFilter(BufferedImage image) {
 		int range = 1;
 		int width = image.getWidth();
@@ -110,5 +116,4 @@ public class SobelFilter implements ImageFilter {
 		}
 		return image;
 	}
-
 }

@@ -14,8 +14,15 @@ public class BlurFilter implements ImageFilter {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
+	/*
+	 * To make an image more soft
+	 * 
+	 * @param image the image to be processed
+	 * 
+	 * @return image return a processed image
+	 */
 	public BufferedImage applyFilter(BufferedImage image) {
+		// The integer range here can be easily changed to adapt to any matrix
 		int range = 1;
 		int width = image.getWidth();
 		int height = image.getHeight();
@@ -41,10 +48,12 @@ public class BlurFilter implements ImageFilter {
 				if (i < range || i > height - 1 - range || j < range || j > width - 1 - range) {
 					continue;
 				}
+				// The x and y is the coordinate of the upper left pixel in the
+				// 3 * 3 matrix
 				int x = i - range;
 				int y = j - range;
 				// Initialize an array to save all the pixel canal information
-				// around a pixel
+				// in the 3 * 3 matrix
 				int[] pInfo = new int[(2 * range + 1) * (2 * range + 1)];
 				int index = 0;
 				for (int k = 0; k <= 2 * range; k++) {
@@ -54,7 +63,8 @@ public class BlurFilter implements ImageFilter {
 					}
 				}
 				// To calculate all the canal information and save it to a
-				// temporary array
+				// temporary array, which has the same size of the original
+				// image
 				int a = 0;
 				int r = 0;
 				int g = 0;
@@ -73,6 +83,8 @@ public class BlurFilter implements ImageFilter {
 				temp[i][j] = (a << 24) + (r << 16) + (g << 8) + b;
 			}
 		}
+		// After the calculation send all the new pixel information to the
+		// buffered image
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
 				image.setRGB(j, i, temp[i][j]);
@@ -80,5 +92,4 @@ public class BlurFilter implements ImageFilter {
 		}
 		return image;
 	}
-
 }
