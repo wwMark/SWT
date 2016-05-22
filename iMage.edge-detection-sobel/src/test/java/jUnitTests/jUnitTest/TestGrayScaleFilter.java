@@ -1,4 +1,4 @@
-package jUnitTest;
+package jUnitTests.jUnitTest;
 
 import static org.junit.Assert.*;
 
@@ -18,6 +18,9 @@ public class TestGrayScaleFilter {
 	BufferedImage bI;
 	BufferedImage bIA;
 
+	/*
+	 * Initialize a filter and process an image
+	 */
 	@Before
 	public void setUp() throws Exception {
 		bI = ImageIO.read(new File(
@@ -26,12 +29,16 @@ public class TestGrayScaleFilter {
 		bIA = b.applyFilter(bI);
 	}
 
+	/*
+	 * Output the processed image
+	 */
 	@After
 	public void tearDown() throws Exception {
 		SimpleDateFormat sDF = new SimpleDateFormat("_HHmmss_SSS");
 		String name = "GrayScaleFilter" + sDF.format(System.currentTimeMillis()).toString();
-		File file = new File("E:\\Windows\\EclipseWorkSpace\\SWT\\iMage.edge-detection-sobel\\src\\test\\resources\\"
-				+ name + ".png");
+		File file = new File(
+				"E:\\Windows\\EclipseWorkSpace\\SWT\\iMage.edge-detection-sobel\\src\\test\\resources\\"
+						+ name + ".png");
 		if (bI != null) {
 			try {
 				ImageIO.write(bIA, "png", file);
@@ -41,14 +48,19 @@ public class TestGrayScaleFilter {
 		}
 	}
 
+	/*
+	 * To test whether the information of a pixel have the same value in
+	 * RGB channel
+	 */
 	@Test
 	public void testApplyFilter1() {
-		assertEquals(bI.getHeight(), bIA.getHeight());
-	}
-	
-	@Test
-	public void testApplyFilter2() {
-		assertEquals(bI.getWidth(), bIA.getWidth());
+		int testHeight = bIA.getHeight() / 3;
+		int testWidth = bIA.getWidth() / 3;
+		int bIAPixel = bIA.getRGB(testWidth, testHeight);
+		int r = (bIAPixel & 0x00ff0000) >> 16;
+		int g = (bIAPixel & 0x0000ff00) >> 8;
+		int b = (bIAPixel & 0x000000ff);
+		assertEquals(r, g, b);
 	}
 
 }

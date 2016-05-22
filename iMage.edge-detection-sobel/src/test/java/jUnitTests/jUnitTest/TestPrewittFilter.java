@@ -1,4 +1,4 @@
-package jUnitTest;
+package jUnitTests.jUnitTest;
 
 import static org.junit.Assert.*;
 
@@ -18,6 +18,9 @@ public class TestPrewittFilter {
 	BufferedImage bI;
 	BufferedImage bIA;
 
+	/*
+	 * Initialize a filter and process an image
+	 */
 	@Before
 	public void setUp() throws Exception {
 		bI = ImageIO.read(new File(
@@ -26,12 +29,16 @@ public class TestPrewittFilter {
 		bIA = b.applyFilter(bI);
 	}
 
+	/*
+	 * Output the processed image
+	 */
 	@After
 	public void tearDown() throws Exception {
 		SimpleDateFormat sDF = new SimpleDateFormat("_HHmmss_SSS");
 		String name = "PrewittFilter" + sDF.format(System.currentTimeMillis()).toString();
-		File file = new File("E:\\Windows\\EclipseWorkSpace\\SWT\\iMage.edge-detection-sobel\\src\\test\\resources\\"
-				+ name + ".png");
+		File file = new File(
+				"E:\\Windows\\EclipseWorkSpace\\SWT\\iMage.edge-detection-sobel\\src\\test\\resources\\"
+						+ name + ".png");
 		if (bI != null) {
 			try {
 				ImageIO.write(bIA, "png", file);
@@ -41,11 +48,19 @@ public class TestPrewittFilter {
 		}
 	}
 
+	/*
+	 * To test whether the processed image has the same height of the original
+	 * image
+	 */
 	@Test
 	public void testApplyFilter1() {
 		assertEquals(bI.getHeight(), bIA.getHeight());
 	}
-	
+
+	/*
+	 * To test whether the processed image has the same width of the original
+	 * image
+	 */
 	@Test
 	public void testApplyFilter2() {
 		assertEquals(bI.getWidth(), bIA.getWidth());
