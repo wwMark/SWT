@@ -122,10 +122,9 @@ public class Menu extends JMenuBar {
 		about.add(info);
 		this.add(datei);
 		this.add(option);
-		/*if (swt1.getMenuComponentCount() > 0) {
+		if (swt1.getMenuComponentCount() > 0) {
 			this.add(swt1);
-		}*/
-		this.add(swt1);
+		}
 		this.add(about);
 
 		MenuListner al = new MenuListner(m, this);

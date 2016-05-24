@@ -21,8 +21,8 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-    	<groupId>swt1</groupId>
-    	<artifactId>iMage.edge-detection-sobel</artifactId>
+    	<groupId>swt1.ub2.a4</groupId>
+    	<artifactId>1913673</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
@@ -32,7 +32,6 @@
   </dependencies>
   <build>
 	<plugins>
-
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-jar-plugin</artifactId>
