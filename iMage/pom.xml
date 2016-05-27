@@ -6,24 +6,19 @@
 		<artifactId>uebungsparent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>swt1</groupId>
-	<artifactId>iMage</artifactId>
-  <packaging>pom</packaging>
-  <repositories>
- <repository>
- <id>ipdNexus</id>
- <url>http://bob.ipd.kit.edu/nexus/content/repositories/swt1</url>
- </repository>
-</repositories>
-  
-  <modules>
-  	<module>jmjrst.main</module>
-  	
-  	
-
-
-
-  	<module>../iMage.edge-detection-sobel</module>
-  	<module>iMage.hallo_plugin</module>
-  </modules>
+	<groupId>swt1.ub3.a3</groupId>
+	<artifactId>1913673</artifactId>
+	<packaging>pom</packaging>
+	<repositories>
+		<repository>
+			<id>ipdNexus</id>
+			<url>http://bob.ipd.kit.edu/nexus/content/repositories/swt1</url>
+		</repository>
+	</repositories>
+	<modules>
+		<module>jmjrst.main</module>
+		<module>../iMage.edge-detection-sobel</module>
+		<module>iMage.hallo_plugin</module>
+		<module>iMage.bundle</module>
+	</modules>
 </project>

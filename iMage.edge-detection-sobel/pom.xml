@@ -38,8 +38,8 @@
 	</build>
   <description>Edge detection toolkit for all iMage products.</description>
   <parent>
-  	<groupId>swt1</groupId>
-  	<artifactId>iMage</artifactId>
+  	<groupId>swt1.ub3.a3</groupId>
+  	<artifactId>1913673</artifactId>
   	<version>0.0.1-SNAPSHOT</version>
   	<relativePath>../iMage</relativePath>
   </parent>
