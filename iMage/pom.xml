@@ -6,7 +6,7 @@
 		<artifactId>uebungsparent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>swt1.ub3.a3</groupId>
+	<groupId>swt1.ub1.a1</groupId>
 	<artifactId>1913673</artifactId>
 	<packaging>pom</packaging>
 	<repositories>
@@ -17,8 +17,8 @@
 	</repositories>
 	<modules>
 		<module>jmjrst.main</module>
-		<module>../iMage.edge-detection-sobel</module>
 		<module>iMage.hallo_plugin</module>
 		<module>iMage.bundle</module>
+		<module>iMage-ProjectX</module>
 	</modules>
 </project>

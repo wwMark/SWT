@@ -16,6 +16,8 @@ import org.kohsuke.MetaInfServices;
  */
 @MetaInfServices(JmjrstPlugin.class)
 public class HalloSWT1Plugin extends JmjrstPlugin {
+	
+	private Main jmjrst;
 
 	/*
 	 * Implement the abstract getMenuTest method
@@ -35,6 +37,7 @@ public class HalloSWT1Plugin extends JmjrstPlugin {
 	 * Implement the abstract init method
 	 */
 	public void init(Main main) {
+		jmjrst = main;
 		System.out.println("Ich initialisiere mich fleißig!");
 
 	}

@@ -1,5 +1,6 @@
 package org.iMage.bundle;
 
+import org.jis.Main;
 /**
  * Hello world!
  *
@@ -7,6 +8,6 @@ package org.iMage.bundle;
 public class App {
 	public static void main(String[] args) {
 		System.out.println("hello");
-		org.jis.Main.main(args);
+		Main.main(args);
 	}
 }

@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>swt1.ub3.a3</groupId>
+		<groupId>swt1.ub1.a1</groupId>
 		<artifactId>1913673</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
@@ -10,7 +10,7 @@
 	<artifactId>1913673</artifactId>
 	<dependencies>
 		<dependency>
-			<groupId>swt1.ub1.a1</groupId>
+			<groupId>swt1.ub3.a1</groupId>
 			<artifactId>1913673</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>

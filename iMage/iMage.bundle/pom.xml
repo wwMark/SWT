@@ -1,15 +1,12 @@
-<?xml version="1.0"?>
 <project
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>swt1.ub3.a3</groupId>
+		<groupId>swt1.ub1.a1</groupId>
 		<artifactId>1913673</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>iMage.bundle</artifactId>
-	<name>iMage.bundle</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -61,10 +58,10 @@
 							<goal>copy-dependencies</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${project.build.directory}/target</outputDirectory>
+							<outputDirectory>${project.build.directory}/org/jis</outputDirectory>
 							<overWriteReleases>false</overWriteReleases>
 							<overWriteSnapshots>false</overWriteSnapshots>
-							<overWriteIfNewer>true</overWriteIfNewer>
+							<overWriteIfNewer>false</overWriteIfNewer>
 						</configuration>
 					</execution>
 				</executions>
@@ -78,7 +75,7 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>swt1.ub1.a1</groupId>
+			<groupId>swt1.ub3.a1</groupId>
 			<artifactId>1913673</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
@@ -88,4 +85,6 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+	<artifactId>1913673</artifactId>
+	<groupId>swt1.ub3.a3</groupId>
 </project>
