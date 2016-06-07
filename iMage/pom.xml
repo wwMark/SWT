@@ -19,6 +19,6 @@
 		<module>jmjrst.main</module>
 		<module>iMage.hallo_plugin</module>
 		<module>iMage.bundle</module>
-		<module>iMage-ProjectX</module>
+		
 	</modules>
 </project>

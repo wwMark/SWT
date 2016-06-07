@@ -75,6 +75,6 @@ public class Toolbar extends JToolBar {
     gener.addActionListener(al);
     zippen.addActionListener(al);
     gallerie.addActionListener(al);
-    preferences.addActionListener(al);
-  }
+		preferences.addActionListener(al);
+	}
 }

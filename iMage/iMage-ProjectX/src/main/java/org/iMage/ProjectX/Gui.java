@@ -53,7 +53,7 @@ public class Gui {
 	 * Create the application.
 	 */
 	public Gui() {
-		File file = new File("src/main/resources/HelloAndroid.jpg");
+		File file = new File("src/main/resources/android.png");
 		try {
 			o = ImageIO.read(file);
 		} catch (IOException e) {
