@@ -2,31 +2,27 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>swt1.ub1.a1</groupId>
-		<artifactId>1913673</artifactId>
+		<groupId>swt1</groupId>
 		<version>0.0.1-SNAPSHOT</version>
+		<artifactId>iMage</artifactId>
 	</parent>
 	<groupId>swt1.ub3.a2</groupId>
 	<artifactId>1913673</artifactId>
+	<name>iMage.hallo_plugin</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>swt1.ub3.a1</groupId>
-			<artifactId>1913673</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 		<dependency>
 			<groupId>org.kohsuke.metainf-services</groupId>
 			<artifactId>metainf-services</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>swt1.ub1.a1</groupId>
+			<artifactId>1913673</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.6</version>
-			</plugin>
-		</plugins>
-	</build>
 </project>

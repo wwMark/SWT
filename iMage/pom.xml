@@ -6,8 +6,7 @@
 		<artifactId>uebungsparent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>swt1.ub1.a1</groupId>
-	<artifactId>1913673</artifactId>
+	<groupId>swt1</groupId>
 	<packaging>pom</packaging>
 	<repositories>
 		<repository>
@@ -15,10 +14,20 @@
 			<url>http://bob.ipd.kit.edu/nexus/content/repositories/swt1</url>
 		</repository>
 	</repositories>
+	<artifactId>iMage</artifactId>
 	<modules>
-		<module>jmjrst.main</module>
-		<module>iMage.hallo_plugin</module>
 		<module>iMage.bundle</module>
+		<module>iMage.hallo_plugin</module>
+		<module>jmjrst.main</module>
+		<module>iMage-ProjectX</module>
 		
+		
+		<module>iMage.edge-detection-sobel</module>
 	</modules>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
 </project>
